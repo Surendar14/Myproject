@@ -13,7 +13,7 @@ if (empty($username) || empty($email) || empty($password) || empty($confirm_pass
   $response = array('success' => false, 'message' => 'Passwords do not match.');
 } else {
   // connect to database
-  $conn = new mysqli('localhost', 'username', 'password', 'database_name');
+  $conn = new mysqli('localhost', 'root', 'saveetha', 'Myprojectdb');
 
   // prepare query
   $stmt = $conn->prepare('INSERT INTO users (username, email, password) VALUES (?, ?, ?)');
