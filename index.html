@@ -1,20 +1,30 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-  <script>
-    // This function will redirect to another page
-    function goToPage(url) {
-      window.location.href = url;
-    }
-  </script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Limited</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
-
-  <!-- This button will submit the form -->
-  <button type="submit">Login</button>
-
-  <!-- This button will redirect to another page -->
-  <button type="button" onclick="goToPage('register.html')">Register</button>
-
+  <div class="card-wrapper">
+    <div class="card">
+      <h4 class="title">Welcome to GUVI</h4>
+      <form>
+        
+          <button class="btn" type="submit"><a href="./login.html">Login</a></button>
+        
+          <button class="btn" type="submit"><a href="./register.html">Register</a></button>
+      </form>
+    </div></div>
 </body>
+
 </html>
