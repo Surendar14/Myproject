@@ -17,10 +17,11 @@ $(document).ready(function() {
 			if(data.success)
 			{
 				$('#username').val(data.username);
-
+				$('#dob').val(data.dob);
+				$('#contact-address').val(data.contactAddress);
 			}else{
 				localStorage.removeItem('session_key');
-				window.location.href = './login.html';
+				window.location.href = './profile.html';
 			}
 			//alert(data.session_key);
 			//alert(data.message);
@@ -33,10 +34,12 @@ $(document).ready(function() {
 	// handle form submission
 	$('#profile-form').submit(function(event) {
 		event.preventDefault();
+		alert("hi");
 		var session_key = localStorage.getItem('session_key');
 		// get the form data
 		var age = $('#age').val();
 		var dob = $('#dob').val();
+		var username = $('#username').val();
 		var contactAddress = $('#contact-address').val();
 
 		// send the updated profile data to MongoDB
@@ -50,7 +53,9 @@ $(document).ready(function() {
 				dob: dob,
 				contactAddress: contactAddress
 			},
-			success: function() {
+			success: function(data) {
+
+				alert(data.message);
 				alert('Profile updated successfully.');
 			},
 			error: function() {
