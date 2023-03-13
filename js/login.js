@@ -20,7 +20,7 @@ $(document).ready(function() {
             // redirect to profile page
             localStorage.setItem('session_key',response.session_id);            
             //alert(response.session_id);
-            window.location.href = 'profile.html';
+            window.location.href = './profile.html';
 
           } else {
             // display error message
