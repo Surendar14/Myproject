@@ -1,13 +1,13 @@
 <?php
-// start session
+// To start session
 session_start();
 include("./db.php");
 
-#require_once 'vendor/autoload.php';
+#require once 'vendor/autoload.php';
 // include Redis client library
-#require_once 'predis/autoload.php';
+#require once 'predis/autoload.php';
 
-// create Redis client
+// To create Redis client
 $redis = new Redis();
 $redis->connect(REDIS_HOST, 6379);
 #$redis->auth('REDIS_PASSWORD');
@@ -29,7 +29,7 @@ try {
 
 // check if user exists
 if (!$user) {
-    // return error message as JSON
+    // if user doesnt exit return error message as JSON
     echo json_encode(array('success' => false, 'message' => 'Invalid username or password1.'));
     exit();
 }
