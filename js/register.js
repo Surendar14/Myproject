@@ -4,7 +4,7 @@ $(document).ready(function() {
     // handle form submission
     $('#signup-form').submit(function(e) {
       e.preventDefault(); // prevent default form submission
-  
+      // alert("reg1");
       // get form data
       var formData = {
         username: $('#username').val(),
@@ -25,6 +25,7 @@ $(document).ready(function() {
             window.location.href = 'login.html';
           } else {
             alert(response.message);
+            
           }
         },
         error: function() {
