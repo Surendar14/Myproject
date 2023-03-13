@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
   alert("Started...");
-    // listen for form submission
+    //listen_for_form_submission_here
     $('#login-form').submit(function(event) {
       event.preventDefault(); // prevent default form submission
       
@@ -9,7 +9,7 @@ $(document).ready(function() {
       var username = $('#username').val();
       var password = $('#password').val();
   
-      // send data to server using AJAX
+      // sending_the_data_to_server_using_AJAX
       $.ajax({
         type: 'POST',
         url: './php/login.php',
@@ -17,18 +17,18 @@ $(document).ready(function() {
         dataType: 'json',
         success: function(response) {
           if (response.success) {
-            // redirect to profile page
+            // redirect to profile pagee
             localStorage.setItem('session_key',response.session_id);            
-            //alert(response.session_id);
+            //alert(response.sesssion_id);
             window.location.href = './profile.html';
 
           } else {
-            // display error message
+            // display-error message
             alert(response.message);
           }
         },
         error: function() {
-          // display error message
+          // display-the-error-message
           alert('Error connecting to server.');
         }
       });
