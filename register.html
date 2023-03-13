@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="bootstrap.min.css">
+
   <link rel="stylesheet" href="./CSS/register.css">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 <body>
+  
+  <section class="intro">
+    
+    <div class="glassmorphism-form">
+      <form id="signup-form">
+        <h2 class="re">Register</h2>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="username" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+        </div>
+        <button type="submit" >Register</button>
+        
+      </form>
+    </div>
+  
+          
+  </section>
+ 
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+<script src="./js/register.js"></script>
+  
 
-  <div class="container">
+ 
+
+</body>
+</html>
+<!-- <div class="container">
     <h2 id="s">Register</h2>
     <form id="signup-form">
       <div class="form-group">
@@ -29,14 +67,4 @@
       </div>
       <button type="submit" class="btn btn-primary">Register</button>
     </form>
-  </div>
-  <script
-  src="https://code.jquery.com/jquery-3.6.4.js"
-  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-  crossorigin="anonymous"></script>
-  <script src="jquery.min.js"></script>
-  
-  <script src="./js/register.js"></script>
-
-</body>
-</html>
+  </div>-->
