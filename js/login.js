@@ -1,7 +1,7 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
   
   alert("Started...");
-    //listen_for_form_submission_here
+    // listen for form submission
     $('#login-form').submit(function(event) {
       event.preventDefault(); // prevent default form submission
       
@@ -9,28 +9,65 @@ $(document).ready(function() {
       var username = $('#username').val();
       var password = $('#password').val();
   
-      // sending_the_data_to_server_using_AJAX
+      // send data to server using AJAX
       $.ajax({
         type: 'POST',
         url: './php/login.php',
         data: { username: username, password: password },
         dataType: 'json',
+      
         success: function(response) {
           if (response.success) {
-            // redirect to profile pagee
+            // redirect to profile page
             localStorage.setItem('session_key',response.session_id);            
-            //alert(response.sesssion_id);
+            alert(response.session_id);
             window.location.href = './profile.html';
 
           } else {
-            // display-error message
+            // display error message
             alert(response.message);
           }
         },
         error: function() {
-          // display-the-error-message
+          // display error message
           alert('Error connecting to server.');
         }
       });
     });
-  });
+  });*/
+$(document).ready(function() {
+  
+    alert("Started...");
+      // listen-for-form -submission
+      $('#login-form').submit(function(event) {
+        event.preventDefault(); // prevent-default-form-submission
+        
+        // get-form-data
+        var username = $('#username').val();
+        var password = $('#password').val();
+    
+        // send-data-to-server-using-AJAX
+        $.ajax({
+          type: 'POST',
+          url: './php/login.php',
+          data: { username: username, password: password },
+          dataType: 'json',
+          success: function(response) {
+            if (response.success) {
+              // redirect-to-profile-page
+              localStorage.setItem('session_key',response.session_id);            
+              //alert(response.session_id);
+              window.location.href = 'profile.html';
+  
+            } else {
+              // display-error-message
+              alert(response.message);
+            }
+          },
+          error: function() {
+            // display-error-message
+            alert('Error connecting to server.');
+          }
+        });
+      });
+    });
