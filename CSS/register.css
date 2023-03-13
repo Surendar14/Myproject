@@ -1,6 +1,6 @@
 
 body {
-  font: 1em/1.618 Inter, sans-serif;
+  font: 1em/1.618 'San Francisco', Helvetica, Arial, san-serif;
 
   display: flex;
   align-items: center;
@@ -19,7 +19,7 @@ body {
 
 .re{
   color: #f3f3f3;
-  font: Inter, sans-serif;
+  font: 'San Francisco', Helvetica, Arial, san-serif;
   font-size: xx-large;
 
 }
