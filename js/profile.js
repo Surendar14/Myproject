@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 	// get the current user's username from local storage
 	var session_key = localStorage.getItem('session_key');
@@ -21,7 +22,7 @@ $(document).ready(function() {
 				$('#contact-address').val(data.contactAddress);
 			}else{
 				localStorage.removeItem('session_key');
-				window.location.href = './profile.html';
+				window.location.href = './login.html';
 			}
 			//alert(data.session_key);
 			//alert(data.message);
@@ -37,7 +38,7 @@ $(document).ready(function() {
 		alert("hi");
 		var session_key = localStorage.getItem('session_key');
 		// get the form data
-		var age = $('#age').val();
+
 		var dob = $('#dob').val();
 		var username = $('#username').val();
 		var contactAddress = $('#contact-address').val();
@@ -49,7 +50,6 @@ $(document).ready(function() {
 			data: {
 				session_key: session_key,
 				username: username,
-				age: age,
 				dob: dob,
 				contactAddress: contactAddress
 			},
